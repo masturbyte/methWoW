@@ -1,6 +1,7 @@
 # methwow - PUT RCE Checker
 
 `methwow` is a simple Bash script designed to test if a website or subdomains allow file uploads using the HTTP `PUT` method, which can be exploited to achieve Remote Code Execution (RCE). The script checks available HTTP methods and attempts to upload a sample file (`wow.txt`) using the `PUT` method, then retrieves it with a `GET` request to verify success.
+![image](https://github.com/user-attachments/assets/16795bd1-9767-4e73-aaa1-da1d4e64a388)
 
 ## Features
 
@@ -21,4 +22,43 @@ There are no additional dependencies required for this script. It only uses buil
    git clone https://github.com/username/methwow.git
    cd methwow
    chmod +x methwow.sh
+## Usage
+
+### Running the Script
+
+To run the script, you need to provide either a single domain or a file containing a list of subdomains. 
+
+#### Single Domain
+
+To check a single domain, use the following command:
+
+```bash
+./methwow.sh https://www.example.com
+```
+#### List of Subdomains
+
+To check multiple subdomains from a file, use the following command:
+
+```bash
+./methwow.sh subdomains.txt
+```
+
+```bash
+
+███▄ ▄███▓▓█████▄▄▄█████▓ ██░ ██  █     █░ ▒█████   █     █░ 
+▓██▒▀█▀ ██▒▓█   ▀▓  ██▒ ▓▒▓██░ ██▒▓█░ █ ░█░▒██▒  ██▒▓█░ █ ░█░ 
+▓██    ▓██░▒███  ▒ ▓██░ ▒░▒██▀▀██░▒█░ █ ░█ ▒██░  ██▒▒█░ █ ░█ 
+▒██    ▒██ ▒▓█  ▄░ ▓██▓ ░ ░▓█ ░██ ░█░ █ ░█ ▒██   ██░░█░ █ ░█ 
+▒██▒   ░██▒░▒████▒ ▒██▒ ░ ░▓█▒░██▓░░██▒██▓ ░ ████▓▒░░░██▒██▓ 
+░ ▒░   ░  ░░░ ▒░ ░ ▒ ░░    ▒ ░░▒░▒░ ▓░▒ ▒  ░ ▒░▒░▒░ ░ ▓░▒ ▒ 
+░  ░      ░ ░ ░  ░   ░     ▒ ░▒░ ░  ▒ ░ ░    ░ ▒ ▒░   ▒ ░ ░ 
+       ░      ░  ░         ░  ░  ░    ░        ░ ░      ░ 
+         made it by : @masturbyte | Ahmed Kori
+
+[*] https://subdomain1.example.com allows: [GET POST PUT DELETE]
+[+] Successfully uploaded wow.txt to https://subdomain1.example.com/wow.txt
+
+[*] https://subdomain2.example.com allows: [GET POST DELETE]
+[-] Failed to upload wow.txt to subdomain2.example.com
+```
 
