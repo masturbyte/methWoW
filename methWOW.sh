@@ -30,9 +30,9 @@ check_options() {
     allow=$(echo "$response" | grep -i "^Allow:" | awk '{for(i=2;i<=NF;i++) printf $i " "; print ""}')
 
     if [ -n "$allow" ]; then
-        echo -e "${GREEN}[*] $url allows: [$allow]${NC}"
+        echo -e "${GREEN} [*] $url allows: $allow${NC}"
     else
-        echo -e "${RED}[-] $url: Couldn't retrieve available methods${NC}"
+        echo -e "${RED} [-] $url: Couldn't retrieve available methods${NC}"
     fi
 
     if [[ $allow == *"PUT"* ]]; then
