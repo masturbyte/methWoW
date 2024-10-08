@@ -1,4 +1,4 @@
-# methwow - PUT RCE Checker
+# methWoW - PUT RCE Checker
 
 `methwow` is a simple Bash script designed to test if a website or subdomains allow file uploads using the HTTP `PUT` method, which can be exploited to achieve Remote Code Execution (RCE). The script checks available HTTP methods and attempts to upload a sample file (`wow.txt`) using the `PUT` method, then retrieves it with a `GET` request to verify success.
 ![image](https://github.com/user-attachments/assets/16795bd1-9767-4e73-aaa1-da1d4e64a388)
