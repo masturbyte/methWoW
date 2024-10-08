@@ -19,7 +19,7 @@ There are no additional dependencies required for this script. It only uses buil
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/username/methwow.git
+   git clone https://github.com/masturbyte/methwow.git
    cd methwow
    chmod +x methwow.sh
 ## Usage
