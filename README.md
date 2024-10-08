@@ -21,7 +21,7 @@ There are no additional dependencies required for this script. It only uses buil
    ```bash
    git clone https://github.com/masturbyte/methwow.git
    cd methwow
-   chmod +x methwow.sh
+   chmod +x methWOW.sh
 ## Usage
 
 ### Running the Script
